@@ -1,0 +1,24 @@
+[
+    {
+        "id": 1,
+        "title": "Fone de Ouvido Bluetooth TWS",
+        "code": "XYZ123",
+        "price": 59.9,
+        "oldPrice": 120.0,
+        "store": "Shopee",
+        "category": "Eletrônicos",
+        "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60",
+        "link": "https://shopee.com.br/seu-link-aqui"
+    },
+    {
+        "id": 2,
+        "title": "Smartwatch D20 Ultra",
+        "code": "ABC456",
+        "price": 35.0,
+        "oldPrice": 89.9,
+        "store": "Shopee",
+        "category": "Eletrônicos",
+        "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&auto=format&fit=crop&q=60",
+        "link": "https://shopee.com.br/seu-link-aqui"
+    }
+]

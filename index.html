@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Viciados em Compras | VEC - Melhores Achadinhos</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/favicon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/favicon.png"
+        />
+
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <meta
+            name="description"
+            content="Encontre os melhores achadinhos e ofertas da Shopee e Mercado Livre. Descontos exclusivos atualizados diariamente pelo VEC."
+        />
+        <meta
+            name="keywords"
+            content="achadinhos, ofertas shopee, cupons mercado livre, descontos, viciados em compras"
+        />
+        <meta name="author" content="VEC - Viciados em Compras" />
+
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:title"
+            content="Viciados em Compras | VEC - Achadinhos"
+        />
+        <meta
+            property="og:description"
+            content="Os melhores produtos com os menores preços. Confira nossa curadoria!"
+        />
+        <meta property="og:image" content="assets/banner-social.png" />
+        <meta
+            property="og:url"
+            content="https://www.tiktok.com/@viciadosemcompras.vec"
+        />
+        <meta property="og:site_name" content="VEC." />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        fontFamily: { sans: ["Inter", "sans-serif"] },
+                        colors: { brand: { 500: "#EF4444", 600: "#DC2626" } },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .no-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+            .no-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .loader {
+                border: 3px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 3px solid #ef4444;
+                width: 24px;
+                height: 24px;
+                animation: spin 1s linear infinite;
+            }
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .copy-feedback {
+                position: absolute;
+                top: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #10b981;
+                color: white;
+                font-size: 10px;
+                padding: 2px 8px;
+                border-radius: 4px;
+                opacity: 0;
+                transition: opacity 0.3s;
+                pointer-events: none;
+            }
+            .copy-feedback.show {
+                opacity: 1;
+            }
+        </style>
+    </head>
+
+    <body
+        class="bg-gray-50 text-gray-900 dark:bg-[#0f172a] dark:text-gray-100 transition-colors duration-300 font-sans pb-20"
+    >
+        <header
+            class="sticky top-0 z-50 w-full transition-all duration-300 bg-white/90 dark:bg-[#0f172a]/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800"
+        >
+            <div class="max-w-md mx-auto px-4 py-3">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="flex items-center gap-2">
+                        <img
+                            src="assets/favicon.png"
+                            alt="VEC"
+                            class="w-6 h-6"
+                        />
+
+                        <h1
+                            class="text-xl font-extrabold text-brand-600 dark:text-brand-500 tracking-tight"
+                        >
+                            VEC.
+                        </h1>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <a
+                            href="https://www.tiktok.com/@viciadosemcompras.vec"
+                            target="_blank"
+                            aria-label="Siga no TikTok"
+                            class="p-2 rounded-full text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 transition"
+                        >
+                            <svg
+                                class="w-5 h-5 fill-current"
+                                viewBox="0 0 24 24"
+                            >
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.9-.32-1.98-.23-2.8.2-.82.41-1.45 1.2-1.65 2.1-.2 1.05.04 2.19.66 3.06.61.85 1.55 1.42 2.58 1.57.94.12 1.9-.07 2.72-.54.87-.51 1.49-1.4 1.68-2.4.11-.64.09-1.29.09-1.93-.02-3.7-.01-7.41-.01-11.12z"
+                                />
+                            </svg>
+                        </a>
+
+                        <button
+                            id="layoutToggle"
+                            aria-label="Mudar visualização"
+                            class="p-2 rounded-full text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 transition"
+                        >
+                            <svg
+                                id="iconGrid"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                                />
+                            </svg>
+                            <svg
+                                id="iconList"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6 hidden"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M4 6h16M4 12h16M4 18h16"
+                                />
+                            </svg>
+                        </button>
+                        <button
+                            id="themeToggle"
+                            aria-label="Alternar modo escuro"
+                            class="p-2 rounded-full text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 transition"
+                        >
+                            <svg
+                                id="iconMoon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"
+                                />
+                            </svg>
+                            <svg
+                                id="iconSun"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6 hidden"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <div
+                        class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+                    >
+                        <svg
+                            class="h-5 w-5 text-gray-400 group-focus-within:text-brand-500 transition-colors"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20"
+                            fill="currentColor"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                clip-rule="evenodd"
+                            />
+                        </svg>
+                    </div>
+                    <input
+                        id="searchInput"
+                        type="text"
+                        placeholder="Busque por nome ou código..."
+                        aria-label="Pesquisar produtos"
+                        class="block w-full pl-10 pr-3 py-3 border border-gray-200 dark:border-gray-700 rounded-xl bg-gray-100 dark:bg-gray-800 focus:bg-white dark:focus:bg-gray-900 focus:ring-2 focus:ring-brand-500 text-sm shadow-sm transition-all"
+                    />
+                </div>
+            </div>
+        </header>
+
+        <div class="max-w-md mx-auto px-4 space-y-6 mt-4">
+            <section class="grid grid-cols-2 gap-3" aria-label="Links de lojas">
+                <a
+                    href="https://collshp.com/viciadosemcompras.shopee"
+                    target="_blank"
+                    class="flex flex-col items-center justify-center gap-2 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm hover:shadow-md transition active:scale-95 border border-transparent hover:border-orange-500/30"
+                >
+                    <img
+                        src="assets/shopee.png"
+                        alt="Shopee"
+                        class="w-30 h-30 object-contain"
+                    />
+                    <span
+                        class="text-xs font-bold text-gray-700 dark:text-gray-300"
+                        >Shopee</span
+                    >
+                </a>
+                <a
+                    href="https://mercadolivre.com/sec/2iCQjNM"
+                    target="_blank"
+                    class="flex flex-col items-center justify-center gap-2 bg-white dark:bg-gray-800 rounded-2xl p-4 shadow-sm hover:shadow-md transition active:scale-95 border border-transparent hover:border-yellow-400/30"
+                >
+                    <img
+                        src="assets/mercadolivre.png"
+                        alt="Mercado Livre"
+                        class="w-30 h-30 object-contain"
+                    />
+                    <span
+                        class="text-xs font-bold text-gray-700 dark:text-gray-300"
+                        >Mercado Livre</span
+                    >
+                </a>
+            </section>
+
+            <section class="flex flex-col gap-3">
+                <select
+                    id="sortSelect"
+                    class="w-full appearance-none bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 py-3 px-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500 text-sm font-medium"
+                >
+                    <option value="default">Ordenar por: Padrão</option>
+                    <option value="price-asc">Preço: Menor → Maior</option>
+                    <option value="price-desc">Preço: Maior → Menor</option>
+                </select>
+                <div
+                    id="categoryContainer"
+                    class="flex gap-2 overflow-x-auto no-scrollbar pb-1"
+                    role="tablist"
+                ></div>
+            </section>
+
+            <main
+                id="products"
+                class="grid grid-cols-2 gap-4 pb-10 min-h-[300px]"
+            ></main>
+
+            <div id="loader" class="hidden flex flex-col items-center py-10">
+                <div class="loader"></div>
+            </div>
+        </div>
+
+        <footer
+            class="text-center py-8 border-t border-gray-200 dark:border-gray-800 mt-8"
+        >
+            <p class="text-brand-600 font-bold text-xl">VEC.</p>
+            <div class="flex justify-center gap-4 my-4">
+                <a
+                    href="https://www.tiktok.com/@viciadosemcompras.vec"
+                    target="_blank"
+                    class="text-xs font-medium bg-black text-white px-4 py-2 rounded-full flex items-center gap-2"
+                >
+                    Siga no TikTok
+                </a>
+            </div>
+            <p class="text-[10px] text-gray-500">
+                © 2025 Viciados em Compras • Todos os direitos reservados
+            </p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
