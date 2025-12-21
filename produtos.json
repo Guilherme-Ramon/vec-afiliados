@@ -10,6 +10,49 @@
         "image": "images/produtos/roupas/cuecas/cueca-boxer-reebok-sem-costura-box-10-unidades.jpg",
         "link": "https://shopee.com.br/seu-link-aqui",
         "_comentario": "Adicione uma vírgula aqui se houver mais produtos"
+    },
+    {
+        "id": 2,
+        "title": "Bebedouro de água Esmaltec EGC35B 20L branco",
+        "code": "YHRNP8-MFPU",
+        "price": 835,
+        "oldPrice": 949,
+        "store": "ML",
+        "category": "Eletrodomésticos",
+        "image": "images/produtos/eletrodomesticos/bebedouro-agua-esmaltec-egc35b-20l-branco.png",
+        "link": "https://mercadolivre.com/sec/2pe9T5r"
+    },
+    {
+        "id": 3,
+        "title": "Tênis Flyer Runner Mesh Bdp Puma",
+        "code": "YHRNP8-PUMA",
+        "price": 219.99,
+        "oldPrice": 349.99,
+        "store": "ML",
+        "category": "Calçados",
+        "image": "images/produtos/calcados/tenis-flyer-runner-mesh-bdp-puma.png",
+        "link": "https://mercadolivre.com/sec/1siSYDa"
+    },
+    {
+        "id": 4,
+        "title": "Micro-ondas Philco PMO23EB Limpa Fácil 20L Potência de 1100W Cor Branco",
+        "code": "YHRNP8-SEXW",
+        "price": 510,
+        "oldPrice": 679,
+        "store": "ML",
+        "category": "Eletrodomésticos",
+        "image": "images/produtos/eletrodomesticos/micro-ondas-philco-pmo23eb-limpa-facil-20l-branco.png",
+        "link": "https://mercadolivre.com/sec/1p1Lo3D"
+    },
+    {
+        "id": 5,
+        "title": "Chapinha cabelo ultra fina Valerie's Hair VH2209 preta / vermelha",
+        "code": "YHRNP8-R8P6",
+        "price": 417.6,
+        "oldPrice": 580,
+        "store": "ML",
+        "category": "Eletrodomésticos",
+        "image": "images/produtos/eletrodomesticos/chapinha-cabelo-ultra-fina-valeries-hair-vh2209-preta-vermelha.png",
+        "link": "https://mercadolivre.com/sec/1BGXq7x"
     }
-    
 ]
