@@ -62,14 +62,16 @@ function showLoading(show) {
     dom.productsContainer.classList.toggle("hidden", show);
 }
 
-// --- FILTRO POR NOME OU CÓDIGO ---
+// --- FILTRO E ORDENAÇÃO (ATUALIZADO) ---
 function filterAndRender(searchTerm = "", sortType = "default") {
     let temp = [...allProducts];
 
+    // 1. Filtro por Categoria
     if (activeCategory !== "Todos") {
         temp = temp.filter((p) => p.category === activeCategory);
     }
 
+    // 2. Filtro por busca (Nome ou Código)
     if (searchTerm) {
         const lowerTerm = searchTerm.toLowerCase().trim();
         temp = temp.filter(
@@ -79,8 +81,32 @@ function filterAndRender(searchTerm = "", sortType = "default") {
         );
     }
 
-    if (sortType === "price-asc") temp.sort((a, b) => a.price - b.price);
-    else if (sortType === "price-desc") temp.sort((a, b) => b.price - a.price);
+    // 3. Lógica de Ordenação (Preço e Loja)
+    if (sortType === "price-asc") {
+        temp.sort((a, b) => a.price - b.price);
+    } else if (sortType === "price-desc") {
+        temp.sort((a, b) => b.price - a.price);
+    } else if (sortType === "store-shopee") {
+        // Coloca produtos da Shopee no topo
+        temp.sort((a, b) => {
+            const storeA = a.store.toLowerCase();
+            const storeB = b.store.toLowerCase();
+            if (storeA === "shopee" && storeB !== "shopee") return -1;
+            if (storeA !== "shopee" && storeB === "shopee") return 1;
+            return 0;
+        });
+    } else if (sortType === "store-ml") {
+        // Coloca produtos do Mercado Livre no topo
+        temp.sort((a, b) => {
+            const storeA = a.store.toLowerCase();
+            const storeB = b.store.toLowerCase();
+            const isMLA = storeA.includes("mercado") || storeA.includes("ml");
+            const isMLB = storeB.includes("mercado") || storeB.includes("ml");
+            if (isMLA && !isMLB) return -1;
+            if (!isMLA && isMLB) return 1;
+            return 0;
+        });
+    }
 
     filteredProducts = temp;
     renderProducts();
