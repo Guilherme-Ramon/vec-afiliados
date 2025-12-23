@@ -6,16 +6,15 @@
         "price": 78.99,
         "oldPrice": 269.9,
         "store": "ML",
-        "category": "Cuecas",
+        "category": "Roupas",
         "image": "images/produtos/roupas/cuecas/cueca-boxer-reebok-sem-costura-box-10-unidades.jpg",
-        "link": "https://shopee.com.br/seu-link-aqui",
-        "_comentario": "Adicione uma vírgula aqui se houver mais produtos"
+        "link": "https://mercadolivre.com/sec/2TjNE3q"
     },
     {
         "id": 2,
         "title": "Bebedouro de água Esmaltec EGC35B 20L branco",
         "code": "YHRNP8-MFPU",
-        "price": 835,
+        "price": 721,
         "oldPrice": 949,
         "store": "ML",
         "category": "Eletrodomésticos",
@@ -30,7 +29,7 @@
         "oldPrice": 349.99,
         "store": "ML",
         "category": "Calçados",
-        "image": "images/produtos/calcados/tenis-flyer-runner-mesh-bdp-puma.png",
+        "image": "images/produtos/roupas/calcados/tenis-flyer-runner-mesh-bdp-puma.png",
         "link": "https://mercadolivre.com/sec/1siSYDa"
     },
     {
@@ -54,5 +53,93 @@
         "category": "Eletrodomésticos",
         "image": "images/produtos/eletrodomesticos/chapinha-cabelo-ultra-fina-valeries-hair-vh2209-preta-vermelha.png",
         "link": "https://mercadolivre.com/sec/1BGXq7x"
+    },
+    {
+        "id": 6,
+        "title": "Xiaomi Poco X7 PRO 5G, Processador Dimensity 8400-Ultra 256GB/512GB + 8GB/12GB RAM, Bateria 6000Mah Versão Global",
+        "code": "ARY-UNZ-VNN",
+        "price": 1966.0,
+        "oldPrice": 2600.0,
+        "store": "Shopee",
+        "category": "Celulares",
+        "image": "images/produtos/eletronicos/xiaomi-poco-x7-pro-5g.png",
+        "link": "https://s.shopee.com.br/8V240Z0WQt"
+    },
+    {
+        "id": 7,
+        "title": "46 Peças Jogo De Chave Catraca Caixa De Ferramentas Completa Reversível Soquetes Maleta",
+        "code": "22892833180",
+        "price": 35.99,
+        "oldPrice": 99.8,
+        "store": "Shopee",
+        "category": "Ferramentas",
+        "image": "images/produtos/ferramentas/jogo-de-chave-catraca-caixa-de-ferramentas-completa-reversivel-soquetes-maleta.png",
+        "link": "https://s.shopee.com.br/20oaKbMHm3"
+    },
+    {
+        "id": 8,
+        "title": "Bicicleta Ergométrica Fitness para Cardio e Musculação 6kg Inercia com base Cor Preto e Vermelho Marca Sevenfit",
+        "code": "YHRNP8-CU0W",
+        "price": 660.0,
+        "oldPrice": 1094.99,
+        "store": "ML",
+        "category": "Fitness",
+        "image": "images/produtos/fitness/bicicleta-ergometrica-sevenfit-preto-vermelho.png",
+        "link": "https://mercadolivre.com/sec/1vwBQuw"  
+    },
+    {
+        "id": 9,
+        "title": "Câmera Segurança Ip Externa Wifi A28 App Icsee Prova Dagua IP66 Dome Lente Dupla Lentes 2 Em 1 Vigilancia Visão Noturna Infravermelho Casenn",
+        "code": "YHRNP8-SRJM",
+        "price": 123.99,
+        "oldPrice": 210.0,
+        "store": "ML",
+        "category": "Eletrônicos",
+        "image": "images/produtos/eletronicos/camera-seguranca-ip-externa-wifi-a28-app-icsee-prova-dagua-ip66-dome-lente-dupla-lentes-2-em-1-vigilancia-visao-noturna-infravermelho-casenn.png",
+        "link": "https://mercadolivre.com/sec/2iPVkkm"
+    },
+    {
+        "id": 10,
+        "title": "Kit 3 Jaqueta Corta Vento Masculina Impermeável Capuz Bolso",
+        "code": "YHRNP8-1K52",
+        "price": 124.9,
+        "oldPrice": 158.9,
+        "store": "ML",
+        "category": "Roupas",
+        "image": "images/produtos/roupas/jaquetas/kit-3-jaqueta-corta-vento-masculina-impermeavel-capuz-bolso.jpg",
+        "link": "https://mercadolivre.com/sec/24nDavm"
+    },
+    {
+        "id": 11,
+        "title": "Kit 3 Shorts Masculino Bermuda Academia Tactel Verão Praia",
+        "code": "YHRNP8-KZ8P",
+        "price": 75.7,
+        "oldPrice": 99.9,
+        "store": "ML",
+        "category": "Roupas",
+        "image": "images/produtos/roupas/shorts/kit-3-shorts-masculino-bermuda-academia-tactel-verao-praia.jpg",
+        "link": "https://mercadolivre.com/sec/1fyYZ63"
+    },
+    {
+        "id": 12,
+        "title": "Creatina Monohidratada 600g Soldiers Nutrition 100% Pura Importada Performance Músculo Treino",
+        "code": "YHRNP8-U7ZQ",
+        "price": 48.9,
+        "oldPrice": 154.9,
+        "store": "ML",
+        "category": "Fitness",
+        "image": "images/produtos/fitness/creatina-monohidratada-600g-soldiers-nutrition-100-pura-importada-performance-musculo-treino.png",
+        "link": "https://mercadolivre.com/sec/2APxFmG"
+    },
+    {
+        "id": 13,
+        "title": "Tênis Masculino Fila Fitnes Treino Caminhada Efecto Runing 2",
+        "code": "YHRNP8-V7EA",
+        "price": 240.89,
+        "oldPrice": 329.99,
+        "store": "ML",
+        "category": "Calçados",
+        "image": "images/produtos/roupas/calcados/tenis-masculino-fila-fitnes-treino-caminhada-efecto-runing-2.png",
+        "link": "https://mercadolivre.com/sec/1UsrEf3"
     }
 ]
