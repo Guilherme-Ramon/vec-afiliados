@@ -141,5 +141,71 @@
         "category": "Calçados",
         "image": "images/produtos/roupas/calcados/tenis-masculino-fila-fitnes-treino-caminhada-efecto-runing-2.png",
         "link": "https://mercadolivre.com/sec/1UsrEf3"
+    },
+    {
+        "id": 14,
+        "title": "Cortador de Cabelos Hair Stylo, Mondial, 10W - CR-02",
+        "code": "YHRNP8-7PC2",
+        "price": 42.39,
+        "oldPrice": 76.9,
+        "store": "ML",
+        "category": "Eletrodomésticos",
+        "image": "images/produtos/eletrodomesticos/cortador-de-cabelos-hair-stylo-mondial-10w-cr-02.png",
+        "link": "https://mercadolivre.com/sec/2bS44Mh"
+    },
+    {
+        "id": 15,
+        "title": "Sofá Retrátil E Reclinável Com Molas 1,80m Livia Suede Preto",
+        "code": "YHRNP8-32JS",
+        "price": 818.1,
+        "oldPrice": 1399.9,
+        "store": "ML",
+        "category": "Móveis",
+        "image": "images/produtos/moveis/sofa-retratil-reclinavel-molas-1-80m-livia-suede-preto.png",
+        "link": "https://mercadolivre.com/sec/1vzgHHk"
+    },
+    {
+        "id": 16,
+        "title": "Espelho Orgânico Com Led 150x50 Cm Para Sala Quarto Banheiro Moldura Flame Led Quente",
+        "code": "YHRNP8-2EYX",
+        "price": 229.9,
+        "oldPrice": 298.9,
+        "store": "ML",
+        "category": "Móveis",
+        "image": "images/produtos/moveis/espelho-organico-com-led-150x50-cm-para-sala-quarto-banheiro-moldura-flame-led-quente.png",
+        "link": "https://mercadolivre.com/sec/24z1FQd"
+    },
+    {
+        "id": 17,
+        "title": "Torneira Gourmet Flexível Bancada Ou Parede Parede Preto",
+        "code": "YHRNP8-MZ6H",
+        "price": 32.99,
+        "oldPrice": 49.99,
+        "store": "ML",
+        "category": "Casa e Jardim",
+        "image": "images/produtos/casa-e-jardim/torneira-gourmet-flexivel-bancada-ou-parede-preto.png",
+        "link": "https://mercadolivre.com/sec/2D2X72H"
+    },
+    {
+        "id": 18,
+        "title": "Jogo C/ 10 Espátulas De Silicone Cozinha Resistente Premium",
+        "code": "YHRNP8-NA3X",
+        "price": 62.93,
+        "oldPrice": 89.9,
+        "store": "ML",
+        "category": "Casa e Jardim",
+        "image": "images/produtos/casa-e-jardim/jogo-c-10-espatulas-de-silicone-cozinha-resistente-premium.png",
+        "link": "https://mercadolivre.com/sec/1T1PDt2"
+    },
+    {
+        "id": 19,
+        "title": "Celular Samsung Galaxy A26 5g 256gb, 8gb Ram, Câmera De 50mp, Ip67, Tela Super Amoled 6.7 , Nfc - Preto",
+        "code": "YHRNP8-6CWF",
+        "price": 1439.1,
+        "oldPrice": 1599.0,
+        "store": "ML",
+        "category": "Celulares",
+        "image": "images/produtos/eletronicos/celular-samsung-galaxy-a26-5g-256gb-8gb-ram-camera-de-50mp-ip67-tela-super-amoled-6-7-nfc-preto.png",
+        "link": "https://mercadolivre.com/sec/31L4gAc"
     }
 ]

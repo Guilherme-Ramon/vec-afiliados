@@ -45,9 +45,12 @@ async function fetchProducts() {
         const response = await fetch("produtos.json");
         if (!response.ok) throw new Error("Erro ao carregar");
         const data = await response.json();
-        allProducts = data;
-        filteredProducts = data;
-        generateCategories(data);
+        
+        // Armazena e inverte para que os novos (últimos do JSON) apareçam primeiro por padrão
+        allProducts = data.reverse(); 
+        
+        filteredProducts = [...allProducts];
+        generateCategories(allProducts);
         renderProducts();
     } catch (error) {
         dom.errorMsg.classList.remove("hidden");
@@ -62,7 +65,7 @@ function showLoading(show) {
     dom.productsContainer.classList.toggle("hidden", show);
 }
 
-// --- FILTRO E ORDENAÇÃO (ATUALIZADO) ---
+// --- FILTRO E ORDENAÇÃO ---
 function filterAndRender(searchTerm = "", sortType = "default") {
     let temp = [...allProducts];
 
@@ -71,7 +74,7 @@ function filterAndRender(searchTerm = "", sortType = "default") {
         temp = temp.filter((p) => p.category === activeCategory);
     }
 
-    // 2. Filtro por busca (Nome ou Código)
+    // 2. Filtro por busca
     if (searchTerm) {
         const lowerTerm = searchTerm.toLowerCase().trim();
         temp = temp.filter(
@@ -81,13 +84,14 @@ function filterAndRender(searchTerm = "", sortType = "default") {
         );
     }
 
-    // 3. Lógica de Ordenação (Preço e Loja)
+    // 3. Ordenação
     if (sortType === "price-asc") {
         temp.sort((a, b) => a.price - b.price);
-    } else if (sortType === "price-desc") {
+    } 
+    else if (sortType === "price-desc") {
         temp.sort((a, b) => b.price - a.price);
-    } else if (sortType === "store-shopee") {
-        // Coloca produtos da Shopee no topo
+    } 
+    else if (sortType === "store-shopee") {
         temp.sort((a, b) => {
             const storeA = a.store.toLowerCase();
             const storeB = b.store.toLowerCase();
@@ -95,8 +99,8 @@ function filterAndRender(searchTerm = "", sortType = "default") {
             if (storeA !== "shopee" && storeB === "shopee") return 1;
             return 0;
         });
-    } else if (sortType === "store-ml") {
-        // Coloca produtos do Mercado Livre no topo
+    } 
+    else if (sortType === "store-ml") {
         temp.sort((a, b) => {
             const storeA = a.store.toLowerCase();
             const storeB = b.store.toLowerCase();
@@ -107,12 +111,14 @@ function filterAndRender(searchTerm = "", sortType = "default") {
             return 0;
         });
     }
+    // Se for "default", ele já está invertido pelo fetchProducts()
 
     filteredProducts = temp;
     renderProducts();
 }
 
 function generateCategories(data) {
+    // Usamos um Set para pegar categorias únicas, mas mantemos o "Todos"
     const cats = ["Todos", ...new Set(data.map((p) => p.category))];
     dom.categoryContainer.innerHTML = cats
         .map(
@@ -144,7 +150,6 @@ function filterByCategory(category) {
     filterAndRender(dom.searchInput.value, dom.sortSelect.value);
 }
 
-// --- FUNÇÃO COPIAR CÓDIGO ---
 function copyCode(event, code) {
     event.preventDefault();
     event.stopPropagation();
@@ -160,10 +165,7 @@ function renderProducts() {
     dom.productsContainer.innerHTML = filteredProducts
         .map((product) => {
             const discount = product.oldPrice
-                ? Math.round(
-                      ((product.oldPrice - product.price) / product.oldPrice) *
-                          100
-                  )
+                ? Math.round(((product.oldPrice - product.price) / product.oldPrice) * 100)
                 : 0;
             const productCode = product.code || "";
 
@@ -186,45 +188,30 @@ function renderProducts() {
                         }
                     </a>
                     
-                    <div class="${
-                        isGridView ? "p-3" : "flex-1 py-1"
-                    } flex flex-col">
+                    <div class="${isGridView ? "p-3" : "flex-1 py-1"} flex flex-col">
                         <div class="flex justify-between items-start mb-1">
-                            <span class="text-[10px] text-gray-500 uppercase font-semibold">${
-                                product.store
-                            }</span>
-                            
+                            <span class="text-[10px] text-gray-500 uppercase font-semibold">${product.store}</span>
                             ${
                                 productCode
                                     ? `
-                                <button onclick="copyCode(event, '${productCode}')" class="relative group/copy flex items-center gap-1 bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded text-[9px] font-bold text-gray-500 dark:text-gray-400 hover:bg-brand-50 hover:text-brand-600 transition" aria-label="Copiar código do produto">
+                                <button onclick="copyCode(event, '${productCode}')" class="relative group/copy flex items-center gap-1 bg-gray-100 dark:bg-gray-700 px-1.5 py-0.5 rounded text-[9px] font-bold text-gray-500 dark:text-gray-400 hover:bg-brand-50 hover:text-brand-600 transition">
                                     ID: ${productCode}
                                     <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
-                                    <span class="copy-feedback">Copiado!</span>
-                                </button>
-                            `
+                                </button>`
                                     : ""
                             }
                         </div>
 
-                        <a href="${
-                            product.link
-                        }" target="_blank" class="block flex-1">
-                            <h3 class="text-sm font-medium text-gray-800 dark:text-gray-100 leading-tight mb-2 line-clamp-2">${
-                                product.title
-                            }</h3>
+                        <a href="${product.link}" target="_blank" class="block flex-1">
+                            <h3 class="text-sm font-medium text-gray-800 dark:text-gray-100 leading-tight mb-2 line-clamp-2">${product.title}</h3>
                             <div class="mt-auto">
                                 ${
                                     product.oldPrice
-                                        ? `<p class="text-xs text-gray-400 line-through">R$ ${product.oldPrice
-                                              .toFixed(2)
-                                              .replace(".", ",")}</p>`
+                                        ? `<p class="text-xs text-gray-400 line-through">R$ ${product.oldPrice.toFixed(2).replace(".", ",")}</p>`
                                         : '<div class="h-4"></div>'
                                 }
                                 <div class="flex items-center justify-between mt-1">
-                                    <p class="text-lg font-bold text-brand-600 dark:text-brand-500">R$ ${product.price
-                                        .toFixed(2)
-                                        .replace(".", ",")}</p>
+                                    <p class="text-lg font-bold text-brand-600 dark:text-brand-500">R$ ${product.price.toFixed(2).replace(".", ",")}</p>
                                     <div class="bg-brand-600 text-white p-1.5 rounded-lg">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                                     </div>
@@ -232,8 +219,7 @@ function renderProducts() {
                             </div>
                         </a>
                     </div>
-                </div>
-                `;
+                </div>`;
         })
         .join("");
 }
